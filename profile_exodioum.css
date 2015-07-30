@@ -39,5 +39,5 @@
 }
 
 .owl-buttons > .owl-prev:hover, .owl-buttons > .owl-next:hover {
-    background-color: #C3AE00;
+    background-color: #C3AE00 !important;
 }
