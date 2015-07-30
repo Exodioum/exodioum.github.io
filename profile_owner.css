@@ -29,11 +29,15 @@
     border-radius: 2px;
 }
 
-#owl-demo .description > h1.title {
+#owl-demo .owl-item .description > .text > h1 {
     background-color: #ab0000 !important;  
 }
 
 #progressBar > #bar {
     background-color: #ab0000 !important;
     box-shadow: 0 0 5px #ab0000 !important;
+}
+
+.owl-buttons > .owl-prev:hover, .owl-buttons > .owl-next:hover {
+    background-color: #ab0000 !important;
 }
