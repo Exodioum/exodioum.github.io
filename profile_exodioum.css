@@ -1,0 +1,39 @@
+.navigation > ul > li > a.active {
+    background-color: #AB9800 !important;
+}
+
+.navigation > ul > li > a:hover, .navigation > ul > li:hover > a {
+    background-color: #C3AE00 !important;
+}
+
+.v2_system_social.main_container {
+     margin-top: 13px;   
+}
+
+.v2_system_social.main_container:before {
+    content: "Web developer";
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    background-color: #AB9800;
+    top: 0;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-family: lato;
+    letter-spacing: 0.8px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 150px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#owl-demo .description > h1.title {
+    background-color: #C3AE00 !important;  
+}
+
+#progressBar > #bar {
+    background-color: #C3AE00 !important;
+    box-shadow: #C3AE00 !important;
+}
