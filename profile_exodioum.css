@@ -35,5 +35,5 @@
 
 #progressBar > #bar {
     background-color: #C3AE00 !important;
-    box-shadow: #C3AE00 !important;
+    box-shadow: 0 0 5px #C3AE00 !important;
 }
