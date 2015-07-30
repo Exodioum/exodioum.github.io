@@ -29,7 +29,7 @@
     border-radius: 2px;
 }
 
-#owl-demo .description > .text > h1.title {
+#owl-demo .owl-item .description > .text > h1 {
     background-color: #C3AE00 !important;  
 }
 
