@@ -21,6 +21,7 @@
 
 .sticky_navigation > ul > li {
     display: table-cell;
+    width: 80px;
 }
 
 .sticky_navigation > ul > li > a {
