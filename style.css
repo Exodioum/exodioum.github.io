@@ -15,6 +15,11 @@
     -moz-transition: 0.2s ease-in-out;
 }
 
+.sticky_navigation.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .sticky_navigation > ul {
     line-height: 70px;
     display: table;
