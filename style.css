@@ -61,6 +61,12 @@
     padding: 0 !important;
 }
 
+.v2_system_social .wall .post {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .v2_system_social .menu_arrow, .v2_system_social .profile_menu .menu_icon, .v2_system_social .profile_menu a.menu_link .menu_icon.fa.fa-twitch, .v2_system_social table.header .cover .cover_edit, .v2_system_social table.header td.spacer_col {
     display: none !important;
 }
