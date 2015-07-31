@@ -6,6 +6,8 @@
     z-index: 100000;
     height: 70px;
     background-color: #D6D6D6;
+    opacity: 1;
+    visibility: hidden;
 }
 
 .sticky_navigation > ul {
