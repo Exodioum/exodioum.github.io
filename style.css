@@ -11,6 +11,9 @@
     display: table;
     list-style-type: none;
     text-align: center;
+    width: 100%;
+    position: relative;
+    padding-left: 0;
 }
 
 .sticky_navigation > ul > li {
