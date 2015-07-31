@@ -172,6 +172,7 @@
     max-width: none;
     min-width: 0;
     overflow: hidden;
+    float: right;
 }
 
 .v2_system_social .profile_sidebar {
