@@ -4,6 +4,7 @@
     width: 100%;
     z-index: 100000;
     height: 70px;
+    background-color: #D6D6D6;
 }
 
 .sticky_navigation > ul {
@@ -11,7 +12,7 @@
     display: table;
     list-style-type: none;
     text-align: center;
-    width: 100%;
+    width: 1044px;
     position: relative;
     padding-left: 0;
 }
@@ -23,7 +24,9 @@
 .sticky_navigation > ul > li > a {
     font-weight: 300;
     font-family: Lato;
+    font-size: 17px;
     color: #000;
+    text-decoration: none;
 }
 
 .sticky_navigation > ul > li > a.active {
