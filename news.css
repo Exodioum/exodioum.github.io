@@ -23,6 +23,11 @@
       text-align: center;
       cursor: pointer;
       text-decoration: none;
+      border-right: 1px solid #D6D6D6;
+   }
+   
+   .news_pagination > a:last-child {
+      border-right: 0;
    }
    
    .news_pagination > a.active_news {
