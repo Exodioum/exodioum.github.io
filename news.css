@@ -6,6 +6,23 @@
    clear: both;
 }
 
+   .news_pagination {
+      width: 100%;
+      display: table;
+      height: 60px;
+   }
+   
+   .news_pagination > a {
+      display: table-cell;
+      line-height: 60px;
+      color: #000;
+      font-weight: 300;
+   }
+   
+   .news_pagination > a.active_news {
+      font-weight: 700;
+   }
+   
     .news_block{
         width:calc(50% - 5px);
         margin-right: 10px;
@@ -28,6 +45,7 @@
         -ms-transition: 0.3s ease-in-out;
         -moz-transition: 0.3s ease-in-out;
         -webkit-transition: 0.3s ease-in-out;
+        margin-bottom: 10px;
     }
     .news_inner > a:first-child {
         text-decoration: none;
