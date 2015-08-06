@@ -38,6 +38,10 @@
       font-weight: 700;
    }
    
+   .news_pagination > a:hover {
+      background-color: #F9F9F9;
+   }
+   
     .news_block{
         width:calc(50% - 5px);
         margin-right: 10px;
