@@ -1,3 +1,7 @@
+.section-divider {
+   width: 10px !Important;
+}
+
 .clearfix:after {
    content: " ";
    visibility: hidden;
