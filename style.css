@@ -233,6 +233,12 @@ body {
   display: none;
 }
 
+.gg_Header {
+  height: 100px;
+  width: 900px;
+  margin: 0 auto;
+}
+
 .gg_Main {
   background-color: #fff;
   width: 900px;
@@ -245,7 +251,6 @@ body {
 
 .gg_Main > div {
   float: left;
-  margin-bottom: 10px;
   display: none;
   font-family: Lato;
 }
