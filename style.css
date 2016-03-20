@@ -255,3 +255,13 @@ body {
 .gg_Main > div.active {
   display: block;
 }
+
+.gg_Main h1 {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.gg_Main > div > img {
+  float: left;
+}
