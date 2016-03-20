@@ -268,12 +268,12 @@ body {
   width: 550px;
 }
 
-.gg_Main > div .item > desc {
+.gg_Main > div .item > .desc {
   text-align: justify;
   width: 450px;
   display: inline-block;
 }
 
-.gg_Main > div .item > desc, .gg_Main > div .item > img {
+.gg_Main > div .item > .desc, .gg_Main > div .item > img {
   float: left;
 }
