@@ -169,7 +169,7 @@ body {
   cursor: pointer;
 }
 
-.gg_Slider_Nav > span:before {
+.gg_Slider > ._content ._item > a > i:before, .gg_Slider_Nav > span:before {
   line-height: 100px;
 }
 
