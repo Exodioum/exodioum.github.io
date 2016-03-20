@@ -257,18 +257,18 @@ body {
 }
 
 .gg_Main {
-  background-color: #fff;
   width: 900px;
   min-height: 100px;
   height: auto;
   margin: 0 auto;
   display: table;
-  margin-bottom: 20px;
 }
 
 .gg_Main > div {
   float: left;
   font-family: Lato;
+  background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .gg_Main h1 {
