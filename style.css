@@ -3,7 +3,7 @@ body {
   margin: 0 !important;
   background-image: url(https://www.bhmpics.com/download/colorful_candy_background-1920x1080.jpg), linear-gradient(to bottom, #1b1b1b 300px, transparent);
   background-blend-mode: overlay;
-  background-position: fixed;
+  background-attachment: fixed;
 }
 
 .gg_Navigation {
