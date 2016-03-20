@@ -163,11 +163,14 @@ body {
   height: 100px;
   display: inline-block;
   color: #fff;
-  line-height: 100px;
   text-align: center;
   font-size: 30px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.gg_Slider_Nav > span:before {
+  line-height: 100px;
 }
 
 .gg_Slider ._block ._items {
