@@ -280,6 +280,7 @@ body {
 .gg_Main > div .item {
   float: left;
   background-color: #fff;
+  height: 275px; 
 }
 
 .gg_Main > div .item > img {
