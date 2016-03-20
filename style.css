@@ -293,6 +293,7 @@ body {
   padding: 15px;
   height: 275px;
   border-left: 5px solid #CCCCCC;
+  box-shadow: 0 1px 0 0 #e8e8e8;
 }
 
 .gg_Main > div .item > .desc, .gg_Main > div .item > img {
