@@ -251,6 +251,7 @@ body {
   line-height: 100px;
   margin: 0;
   padding-left: 15px;
+  box-sizing: border-box;
 }
 
 .gg_Main {
