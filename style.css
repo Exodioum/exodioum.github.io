@@ -263,3 +263,7 @@ body {
 .gg_Main > div .item {
   float: left;
 }
+
+.gg_Main > div .item > img {
+  width: 550px;
+}
