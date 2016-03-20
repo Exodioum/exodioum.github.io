@@ -268,7 +268,6 @@ body {
 .gg_Main > div {
   float: left;
   font-family: Lato;
-  background-color: #fff;
   margin-bottom: 20px;
 }
 
@@ -280,6 +279,7 @@ body {
 
 .gg_Main > div .item {
   float: left;
+  background-color: #fff;
 }
 
 .gg_Main > div .item > img {
