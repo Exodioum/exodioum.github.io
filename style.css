@@ -268,6 +268,10 @@ body {
   width: 550px;
 }
 
+.gg_Main > div .item > img desc {
+  text-align: justify;
+}
+
 .gg_Main > div .item > img desc, .gg_Main > div .item > img {
   float: left;
 }
