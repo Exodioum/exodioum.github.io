@@ -252,6 +252,7 @@ body {
   margin: 0;
   padding-left: 15px;
   box-sizing: border-box;
+  box-shadow: 0 -1px 0 0 #e8e8e8;
 }
 
 .gg_Main {
@@ -277,7 +278,7 @@ body {
 .gg_Main h1 {
   font-family: Montserrat;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 19px;
 }
 
 .gg_Main > div .item {
