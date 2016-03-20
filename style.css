@@ -239,6 +239,18 @@ body {
   margin: 0 auto;
 }
 
+.gg_Header > h1 {
+  font-size: 24px;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 100%;
+  width: 350px;
+  float: right;
+  background-color: #fff;
+  line-height: 100px;
+}
+
 .gg_Main {
   background-color: #fff;
   width: 900px;
