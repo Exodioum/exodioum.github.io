@@ -4,9 +4,9 @@ $(function() {
     $(this).css("background-image", "url("+ bGround +"), linear-gradient(to bottom right, #2b2b2b 30%, transparent 100%)");
   });
 
-  /*setInterval(function () {
+  setInterval(function () {
     $(".gg_Slider_Nav > span.down").click();
-  }, 5000);*/
+  }, 5000);
 
   $(".gg_Slider ._content ._item").each(function() {
     $(this).clone().appendTo(".gg_Slider ._block ._items").children().wrapAll("<span></span>");
