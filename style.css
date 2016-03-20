@@ -270,6 +270,8 @@ body {
 
 .gg_Main > div .item > img desc {
   text-align: justify;
+  width: 450px;
+  display: inline-block;
 }
 
 .gg_Main > div .item > img desc, .gg_Main > div .item > img {
