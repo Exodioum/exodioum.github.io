@@ -268,12 +268,7 @@ body {
 
 .gg_Main > div {
   float: left;
-  display: none;
   font-family: Lato;
-}
-
-.gg_Main > div.active {
-  display: block;
 }
 
 .gg_Main h1 {
