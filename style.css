@@ -253,6 +253,7 @@ body {
   padding-left: 15px;
   box-sizing: border-box;
   box-shadow: 0 1px 0 0 #e8e8e8;
+  border-left: 5px solid rgb(255, 197, 87);
 }
 
 .gg_Main {
