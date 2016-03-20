@@ -237,6 +237,7 @@ body {
   height: 100px;
   width: 900px;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .gg_Header > h1 {
