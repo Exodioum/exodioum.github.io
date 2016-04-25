@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="http://vincentgarreau.com/particles.js/assets/_build/js/lib/particles.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="main">
+		  <div class="player">
+			<div class="content">
+			  <div class="playlist">
+				<audio class="audio1" src="https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/Ash%20O'Connor%20-%20You%20%5BNCS%20Release%5D.mp3"></audio>
+				<audio class="audio2" src="https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/K.Safo%20%26%20Alex%20Skrindo%20-%20Future%20Vibes%20feat.%20Stewart%20Wallace%20(Uplink%20Remix)%20%5BNCS%20Release%5D.mp3"></audio>
+				<audio class="audio3" src="https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/Syn%20Cole%20-%20Feel%20Good%20%5BNCS%20Release%5D.mp3"></audio>
+				<audio class="audio4" src="https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/KARSTEN%20-%20Like%20To%20Know.mp3"></audio>
+				<audio class="audio5" src="https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/Favulous%20-%20Jenny%20From%20The%20Block.mp3"></audio>
+				<div class="shadow"></div>
+				<div class="searchres"></div>
+				<table>
+				  <tr id="audio1">
+					<td class="status"><span></span></td>
+					<td class="artist">Ash O' Connor</td>
+					<td class="s">You</td>
+					<td class="s time">0:00</td>
+				  </tr>
+				  <tr id="audio2">
+					<td class="status"><span></span></td>
+					<td class="artist">K.Safo, Alex Skrindo, Uplink (Remix)</td>
+					<td class="s">Future Vibes</td>
+					<td class="s time">0:00</td>
+				  </tr>
+				  <tr id="audio3">
+					<td class="status"><span></span></td>
+					<td class="artist">Syn Cole</td>
+					<td class="s">Feel Good</td>
+					<td class="s time">0:00</td>
+				  </tr>
+				  <tr id="audio4">
+					<td class="status"><span></span></td>
+					<td class="artist">Karsten</td>
+					<td class="s">Like to Know</td>
+					<td class="s time">0:00</td>
+				  </tr>
+				  <tr id="audio5">
+					<td class="status"><span></span></td>
+					<td class="artist">Favulous</td>
+					<td class="s">Jenny From The Block</td>
+					<td class="s time">0:00</td>
+				  </tr>
+				</table>
+			  </div>
+			  <div class="time">
+				<div class="timestamp">
+				  <p class="current">0:00</p>
+				  <b class="total">0:00</b>
+				</div>
+				<div class="control">
+				  <div class="bar">
+					
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="sidebar">
+			  <div id="particles-js"></div>
+			  <div class="navigation">
+				<div class="search">
+				  <div class="f">
+					<input placeholder="Search song..">
+					<span class="ion-ios-search"></span>
+				  </div>
+				  <div class="i">
+					
+				  </div>
+				</div>
+			  </div>
+			  <div class="avatar">
+
+			  </div>
+			  <div class="controls">
+				<span class="ion-ios-skipbackward prev"></span>
+				<span class="ion-ios-play"></span>
+				<span class="ion-ios-skipforward next"></span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="volume">
+			<div class="control">
+			  <div class="bar">
+				<div class="tooltip">50</div>
+			  </div>
+			</div>
+			<span class="icon ion-ios-volume-high"></span>
+		  </div>
+		</div>
+		<style>
+			.main {
+			  margin: 100px auto 0 auto;
+			  width: 1000px;
+			  height: 650px;
+			  position: relative;
+			}
+
+			.main > .volume {
+			  bottom: 100px;
+			  height: 500px;
+			  width: 100px;
+			  background-color: #1F1D25;
+			  position: absolute;
+			  right: 0;
+			  box-shadow: inset 5px 0 15px -11px rgba(0, 0, 0, 0.6);
+			}
+
+			.main > .volume > .control {
+			  height: 400px;
+			  box-sizing: border-box;
+			  padding: 30px 47px;
+			}
+
+			.main > .volume > .icon {
+			  height: 100px;
+			  line-height: 100px;
+			  text-align: center;
+			  width: 100%;
+			  display: inline-block;
+			  font-size: 30px;
+			  background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			.main > .volume .bar {
+			  background-color: #2F2C38;
+			  height: 100%;
+			  width: 100%;
+			  border-radius: 2px;
+			  position: relative;
+			}
+
+			.main > .volume .bar .tooltip {
+			  width: 60px;
+			  color: #fff;
+			  height: 35px;
+			  position: absolute;
+			  background-color: #C83434;
+			  margin-bottom: 35px;
+			  left: 50%;
+			  transform: translateX(-50%);
+			  display: none;
+			  line-height: 35px;
+			  text-align: center;
+			  bottom: 170px;
+			}
+
+			.main > .volume .bar .tooltip:after {
+			  content: "";
+			  position: absolute;
+			  top: 100%;
+			  border-top: 10px solid #9A2929;
+			  border-right: 40px solid transparent;
+			  right: 0;
+			}
+
+			.main > .volume .bar .tooltip:before {
+			  content: "";
+			  position: absolute;
+			  top: 100%;
+			  border-right: 10px solid #6D2626;
+			  border-top: 10px solid transparent;
+			  border-bottom: 10px solid transparent;
+			  right: 30px;
+			}
+
+			.main > .volume .bar .ui-slider-range {
+			  width: 100%;
+			  height: 100px;
+			  display: inline-block;
+			  background-image: linear-gradient(45deg, #6D2626 50%, #9A2929 50%, #9A2929 80%, #C83434 80%);
+			  position: absolute;
+			  bottom: 0;
+			  cursor: pointer;
+			  border-bottom-left-radius: 3px;
+			  border-bottom-right-radius: 3px;
+			}
+
+			.main > .volume .bar .ui-slider-handle {
+			  border-radius: 50%;
+			  height: 15px;
+			  width: 15px;
+			  background-color: #ddd;
+			  content: "";
+			  position: absolute;
+			  left: 50%;
+			  margin-bottom: -5px;
+			  transform: translateX(-50%);
+			  display: inline-block;
+			  outline-width: 0 !important;
+			  cursor: pointer;
+			}
+
+			.player {
+			  display: table;
+			  width: 900px;
+			}
+
+			.player > div {
+			  float: left;
+			}
+
+			.player > .content {
+			  width: 600px;
+			  background-color: #1F1D25;
+			  margin: 50px 0;
+			  height: 500px;
+			  box-shadow: inset -5px 0 15px -11px rgba(0, 0, 0, 0.6);
+			}
+
+			.player > .content .playlist {
+			  width: 100%;
+			  height: 400px;
+			  box-sizing: border-box;
+			  padding: 30px 35px 30px 0px;
+			  position: relative;
+			  overflow-y: auto;
+			}
+
+			.player > .content .playlist::-webkit-scrollbar {
+			  width: 18px;
+			}
+
+			.player > .content .playlist::-webkit-scrollbar-thumb {
+			  border-radius: 10px;
+			  background-color: #2F2C38;
+			  height: 5px;
+			  border: 6px solid transparent;
+			  background-clip: padding-box;
+			}
+
+			.player > .content .playlist > table {
+			  width: 100%;
+			}
+
+			.player > .content .playlist > table tr {
+			  cursor: pointer;
+			  height: 30px;
+			}
+
+			.player > .content .playlist > table tr > td.artist {
+			  transition: 0.3s ease-in-out;
+			}
+
+			.player > .content .playlist.play > table tr > td.artist {
+			  color: rgba(255, 255, 255, 0.4);
+			}
+
+			.player > .content .playlist.play > table tr.active > td.artist {
+			  color: #fff;
+			}
+
+			.player > .content .playlist > table tr:hover > td span {
+			  background-color: #fff;
+			}
+
+			.player > .content .playlist > table tr.active > td span {
+			  background-color: #C83434;
+			  height: 15px;
+			  width: 15px;
+			}
+
+			@keyframes loadingSong {
+			  from {
+				transform: rotate(0deg);
+			  }
+			  to {
+				transform: rotate(360deg);
+			  }
+			}
+
+			.player > .content .playlist > table tr.active.loading span {
+			  animation: loadingSong 0.5s linear infinite;
+			}
+
+			.player > .content .playlist > table tr.active.loading > td span:after {
+			  content: "";
+			  border-top: 15px solid #1F1D25;
+			  border-left: 7.5px solid transparent;
+			  border-right: 7.5px solid transparent;
+			  position: absolute;
+			  left: 50%;
+			  transform: translateX(-50%) translateY(-50%);
+			  border-top-left-radius: 50%;
+			  border-top-right-radius: 50%;
+			}
+
+			.player > .content .playlist > table tr.active.pause > td span {
+			  background-color: #fff !important;
+			}
+
+			.player > .content .playlist > table td.s {
+			  color: rgba(255, 255, 255, 0.2);
+			}
+
+			.player > .content .playlist > table td.artist {
+			  padding-right: 30px;
+			}
+
+			.player > .content .playlist > table td.s, .player > .content .playlist > table td.artist {
+			  text-overflow: ellipsis;
+			  max-width: 150px;
+			  overflow: hidden;
+			  white-space: nowrap;
+			}
+
+			.player > .content .playlist > table td.s.time {
+			  text-align: right;
+			}
+
+			.player > .content .playlist > table td.status {
+			  width: 95px;
+			  text-align: center;
+			  line-height: 0;
+			}
+
+			.player > .content .playlist > table td.status > span {
+			  height: 5px;
+			  width: 5px;
+			  border-radius: 50%;
+			  background-color: rgba(255, 255, 255, 0.2);
+			  display: inline-block;
+			  transition: background-color 0.3s ease-in-out;
+			  position: relative;
+			}
+
+			.player > .content > .time {
+			  width: 100%;
+			  height: 100px;
+			  background-color: rgba(0, 0, 0, 0.1);
+			  display: table;
+			  position: relative;
+			}
+
+			.player > .content > .time:after {
+			  content: "";
+			  height: 70px;
+			  width: 100%;
+			  position: absolute;
+			  background-image: linear-gradient(to bottom, transparent, rgb(31, 29, 37) 85%);
+			  bottom: 100%;
+			  left: 0;
+			  pointer-events: none;
+			}
+
+			.player > .content .time > div {
+			  display: table-cell;
+			}
+
+			.player > .content .time .timestamp {
+			  width: 100px;
+			  vertical-align: middle;
+			  text-align: center;
+			  font-size: 15px;
+			}
+
+			.player > .content .time .timestamp > p {
+			  margin: 0;
+			  color: rgba(255, 255, 255, 0.3);
+			}
+
+			.player > .content .time .timestamp > b {
+			  color: rgba(255, 255, 255, 0.5);
+			}
+
+			.player > .content .time .control {
+			  width: 500px;
+			  padding: 47px 35px 47px 0;
+			}
+
+			.player > .content .time .control .bar {
+			  width: 100%;
+			  height: 100%;
+			  background-color: #2F2C38;
+			  border-radius: 3px;
+			  position: relative;
+			}
+
+			.player > .content .time .control .bar .ui-slider-range {
+			  border-top-left-radius: 3px;
+			  border-bottom-left-radius: 3px;
+			  background-image: linear-gradient(45deg, #6D2626 50%, #9A2929 50%, #9A2929 80%, #C83434 80%);
+			  height: 100%;
+			  width: 0%;
+			  position: relative;
+			  z-index: 1;
+			}
+
+			.player > .content .time .control .bar .ui-slider-handle {
+			  border-radius: 50%;
+			  height: 15px;
+			  width: 15px;
+			  background-color: #ddd;
+			  content: "";
+			  position: absolute;
+			  top: 50%;
+			  margin-bottom: -5px;
+			  transform: translateY(-50%);
+			  display: inline-block;
+			  outline-width: 0 !important;
+			  cursor: pointer;
+			  z-index: 1;
+			}
+
+			.player > .sidebar {
+			  background-color: #24222B;
+			  width: 300px;
+			  background-image: linear-gradient(to bottom, #24222B 20%, rgba(64, 57, 84, 0.2) 100%), url(https://raw.githubusercontent.com/Exodioum/exodioum.github.io/master/K2-Eight-thousander-List_of_countries_by_highest_point-List_of_highest_mountains.jpg);
+			  background-position: right 0;
+			  position: relative;
+			}
+
+			.player > .sidebar:after {
+			  content: "";
+			  position: absolute;
+			  top: 100%;
+			  border-top: 15px solid #1F1D25;
+			  border-left: 150px solid transparent;
+			  border-right: 150px solid transparent;
+			  left: 0;
+			}
+
+			.player > .sidebar > div {
+			  padding: 0 10px;
+			  box-sizing: border-box;
+			}
+
+			.player > .sidebar #particles-js {
+			  height: 100%;
+			  width: 100%;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  pointer-events: none;
+			}
+
+			.player > .sidebar .avatar {
+			  height: 195px;
+			}
+
+			.player > .sidebar .controls {
+			  height: 95px;
+			  background-color: #1F1D25;
+			  width: 100%;
+			  display: table;
+			  table-layout: fixed;
+			  padding: 0;
+			  position: relative;
+			  z-index: 2;
+			}
+
+			.player > .sidebar .controls > span {
+			  display: table-cell;
+			  text-align: center;
+			  line-height: 95px;
+			  font-size: 25px;
+			  transition: 0.15s ease-in-out;
+			  cursor: pointer;
+			  border-top: 5px solid rgb(47, 44, 56);
+			  position: relative;
+			}
+
+			.player > .sidebar .controls > span:after {
+			  content: '';
+			  border-top: 5px solid #C83434;
+			  border-left: 15px solid transparent;
+			  border-right: 15px solid transparent;
+			  position: absolute;
+			  left: 0;
+			  right: 0;
+			  margin: 0 auto;
+			  top: 0;
+			  width: 0;
+			  opacity: 0;
+			  transition: 0.15s ease-in-out;
+			}
+
+			.player > .sidebar .controls > span:hover {
+			  border-top-color: #C83434;
+			}
+
+			.player > .sidebar .controls > span:hover:after {
+			  opacity: 1;
+			}
+
+			.player > .sidebar .navigation {
+			  height: 300px;
+			  width: 300px;
+			  display: inline-block;
+			}
+
+			.player > .sidebar .navigation .search {
+			  width: 230px;
+			  display: table;
+			  margin: 35px auto;
+			}
+
+			.player > .sidebar .navigation .search .f {
+			  display: inline-block;
+			  position: relative;
+			}
+
+			.player > .sidebar .navigation .search .f:after {
+			  content: "";
+			  position: absolute;
+			  top: 100%;
+			  right: 0;
+			  border-top: 20px solid #2b2933;
+			  border-right: 70px solid transparent;
+			}
+
+			.player > .sidebar .navigation .search .f:before {
+			  content: "";
+			  position: absolute;
+			  bottom: 100%;
+			  left: 0;
+			  border-bottom: 15px solid #2b2933;
+			  border-left: 50px solid transparent;
+			}
+
+			.player > .sidebar .navigation .search .f > input {
+			  width: 180px;
+			  height: 50px;
+			  box-sizing: border-box;
+			  padding-left: 20px;
+			  color: #fff;
+			  background-color: #312F3A;
+			  border: none;
+			  outline: none;
+			  float: right;
+			}
+
+			.player > .sidebar .navigation .search .f > input::-webkit-input-placeholder {
+			  color: rgba(255, 255, 255, 0.5);
+			}
+
+			.player > .sidebar .navigation .search .f > span {
+			  width: 50px;
+			  height: 50px;
+			  float: right;
+			  background-color: #312F3A;
+			  position: relative;
+			  cursor: pointer;
+			  line-height: 50px;
+			  text-align: center;
+			}
+
+			.player > .sidebar .navigation .search .f > span:after {
+			  content: "";
+			  position: absolute;
+			  left: 100%;
+			  width: 1px;
+			  height: 20px;
+			  background-color: rgba(255, 255, 255, 0.3);
+			  top: 0; bottom: 0; margin: auto 0;
+			}
+
+			.player > .sidebar .navigation .search > input:focus {
+			  outline-offset: 0;
+			}
+
+			* {
+			  color: #fff;
+			  font-family: Open sans;
+			}
+
+			body {
+			  background-color: #16151B;
+			  margin: 0 auto;
+			}
+		</style>
+		<script>
+			//Spatie = start/stop
+			$(window).keypress(function (e) {
+			  if(e.keyCode == 32 && !$("input").is(":focus")) {
+				$(".player > .sidebar .controls > span:nth-child(2)").click();
+			  }
+			});
+
+			$(function () {
+			  //Search jQuery
+			  $(".player > .sidebar .navigation .search .f > input").focus(function () {
+				$(this).parent().addClass("focus");
+			  }).blur(function() {
+				$(this).parent().removeClass("focus")
+			  });
+			  
+			  $(".player > .sidebar .navigation .search .f > input").keyup(function () {
+				var searchCMD = $(this).val().toLowerCase();
+
+				$(".player > .content .playlist > table tr").each(function () {
+				  var searchID = $(this).text().toLowerCase();
+				  
+				  if(searchID.indexOf(searchCMD) != -1) {
+					$(this).show();
+				  }
+				  else {
+					$(this).hide();
+				  }
+				});
+			  });
+			  //Playlist voortzetten na einde van een liedje
+			  $("audio").bind("ended", function () {
+				$(".player > .sidebar .controls > span.next").click();
+			  });
+			  //Time bar
+			  $("audio").bind("timeupdate", function () {
+				trackedTime(this.currentTime);
+				trackedTimeBar(this.currentTime, this.duration);
+			  });
+			  //Waiting status 
+			  $("audio").bind("waiting", function () {
+				$(".player > .content .playlist > table tr.active").addClass("loading");
+			  }).bind("canplaythrough", function () {
+				$(".player > .content .playlist > table tr.active").removeClass("loading");
+			  });
+			  
+			  function trackedTimeBar(currentTime, duration) {
+				var roundedCurrentTime = parseInt(currentTime, 10);
+				var roundedDuration = parseInt(duration, 10);
+				var progress = roundedCurrentTime / roundedDuration * 100;
+				
+				$(".player > .content .time .control .bar .ui-slider-handle").css({
+				  left: progress + "%"
+				});
+				$(".player > .content .time .control .bar .ui-slider-range").width(progress + "%");
+			  }
+			  
+			  function trackedTime(currentTime) {
+				var roundedTime = parseInt(currentTime, 10);
+				var min = Math.floor(roundedTime / 60);
+				var sec = roundedTime % 60;
+				if(sec < 10) {sec = "0" + sec;}
+				
+				$(".player > .content .time .timestamp > p").text(min + ":" + sec);
+			  }
+			  //Instellen als standaard volume
+			  $("audio").prop("volume", 0.5);
+			  //Speel liedje af op klik
+			  $(".player > .content .playlist > table tr").click(function () {
+				var audioID = $(this).attr("id");
+				var audioFile = "." + audioID;
+				
+				$(".player > .sidebar .controls > span.ion-ios-play").attr("class", "ion-ios-pause");
+				$(".player > .content .playlist > table tr.active").removeClass("active");
+				$(this).addClass("active");
+				
+				if($("audio.active").length) {      
+				  $("audio.active").get(0).pause();
+				  $("audio.active").get(0).currentTime = 0;
+				  $("audio.active").removeClass("active");
+				}
+				
+				$(".player > .content .playlist > table tr.pause").removeClass("pause");
+				if($(".player > .content .playlist > table tr.active").length) {
+				  $(".player > .content .playlist").addClass("play");
+				}
+				
+				$("audio").bind("timeupdate", function () {
+				  $(".player > .content .time .timestamp > b").html($(".player > .content .playlist > table tr.active").find(".time").html());
+				});
+				$(audioFile).addClass("active").get(0).play();
+			  });
+			  //Speel vorige liedje af
+			  $(".player > .sidebar .controls > span.prev").click(function () {
+				$(".player > .content .playlist > table tr.active").prev("tr").click();
+				$(".player > .content .playlist > table tr.pause").removeClass("pause");
+				
+				if($(".player > .content .playlist > table tr.active").length && !$(".player > .content .playlist > table tr.active").is(":first-child")) {
+				  $(".player > .content .playlist").addClass("play");
+				  $(".player > .content .playlist").animate({
+					scrollTop: $(".player > .content .playlist > table tr.active").prev("tr").position().top + $(".player > .content .playlist > table tr.active").prev("tr").height() - 10 + "px"
+				  }, 1000);
+				}
+			  });
+			  //Start of pauzeer het huidige liedje / Start playlist
+			  $(".player > .sidebar .controls > span:nth-child(2)").click(function () {
+				if($(this).hasClass("ion-ios-play")) {
+				  $(".player > .content .playlist").addClass("play");
+				  if($(".player > .content .playlist > table tr.active").length) {
+					$("audio.active").get(0).play();
+					$(this).addClass("ion-ios-pause").removeClass("ion-ios-play");
+					$(".player > .content .playlist > table tr.active").removeClass("pause");
+				  }
+				  else {
+					$(".player > .content .playlist > table tr:first-child").click();
+				  }
+				}
+				else {
+				  $(".player > .content .playlist").removeClass("play");
+				  $("audio.active").get(0).pause();
+				  $(this).removeClass("ion-ios-pause").addClass("ion-ios-play");
+				  $(".player > .content .playlist > table tr.active").addClass("pause");
+				}
+			  });
+			  //Speel volgende liedje af
+			  $(".player > .sidebar .controls > span.next").click(function () {
+				$(".player > .content .playlist > table tr.active").next("tr").click();
+				$(".player > .content .playlist > table tr.pause").removeClass("pause");
+				
+				if($(".player > .content .playlist > table tr.active").length && !$(".player > .content .playlist > table tr.active").is(":last-child")) {
+				  $(".player > .content .playlist").addClass("play");
+				  $(".player > .content .playlist").animate({
+					scrollTop: $(".player > .content .playlist > table tr.active").next("tr").position().top - $(".player > .content .playlist > table tr.active").next("tr").height() - 10 + "px"
+				  }, 1000);
+				}
+			  });
+			  //Volume regeling
+			  $(".main > .volume .bar").slider({
+				value: 50,
+				orientation: "vertical",
+				range: "min",
+				max: 100,
+				animate: true,
+				
+				start: function(event, ui) {
+				  $(".main > .volume .bar .tooltip").fadeIn();
+				},
+				
+				slide: function(event, ui) {
+				  var value = $(".main > .volume .bar").slider("value");
+				  var valueBoost = value * 2 + 20;
+				  
+				  $("audio").prop("volume", ui.value / 100);
+				  $(".main > .volume .bar .tooltip").css("bottom", value / 100 * 340).text(ui.value);
+				  $(".main > .volume > .icon").css("color", "rgba(255, 255, 255,"+ valueBoost / 100 +")");
+				},
+				
+				stop: function(event, ui) {
+				  $(".main > .volume .bar .tooltip").fadeOut();
+				},
+			  });
+			  //Timestamp controle
+			  $(".player > .content .time .control .bar").slider({
+				value: 0,
+				orientation: "horizontal",
+				range: "min",
+				max: 100,
+				animate: true,
+				
+				slide: function(event, ui) {
+				  $("audio.active").get(0).currentTime = ui.value / 100 * $("audio.active").get(0).duration;
+				},
+			  });
+			  //Geef de tijd per liedje aan
+			  $("audio").bind("durationchange", function () {
+				$(".player > .content .playlist > table td.s.time").each(function () {
+					var audioID = $(this).parent().attr("id");
+					var audioFile = "." + audioID;
+					var roundedTime = parseInt($(audioFile).get(0).duration, 10);
+					var min = Math.floor(roundedTime / 60);
+					var sec = roundedTime % 60;
+					if(sec < 10) {sec = "0" + sec;}
+
+					$(this).text(min + ":" + sec);
+				});
+				});
+			});
+			//Sidebar particles
+			particlesJS("particles-js", {
+			  "particles": {
+				"number": {
+				  "value": 20,
+				  "density": {
+					"enable": true,
+					"value_area": 300
+				  }
+				},
+				"color": {
+				  "value": "#fff"
+				},
+				"shape": {
+				  "type": "circle",
+				  "stroke": {
+					"width": 0,
+					"color": "#000000"
+				  },
+				  "polygon": {
+					"nb_sides": 5
+				  },
+				  "image": {
+					"src": "img/github.svg",
+					"width": 100,
+					"height": 100
+				  }
+				},
+				"opacity": {
+				  "value": 0.5,
+				  "random": true,
+				  "anim": {
+					"enable": true,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				  }
+				},
+				"size": {
+				  "value": 2,
+				  "random": true,
+				  "anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				  }
+				},
+				"line_linked": {
+				  "enable": false,
+				  "distance": 150,
+				  "color": "#ffffff",
+				  "opacity": 0.4,
+				  "width": 1
+				},
+				"move": {
+				  "enable": true,
+				  "speed": 6,
+				  "direction": "top-left",
+				  "random": false,
+				  "straight": false,
+				  "out_mode": "out",
+				  "bounce": false,
+				  "attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 1200
+				  }
+				}
+			  },
+			  "interactivity": {
+				"detect_on": "canvas",
+				"events": {
+				  "onhover": {
+					"enable": true,
+					"mode": ""
+				  },
+				  "onclick": {
+					"enable": true,
+					"mode": ""
+				  },
+				  "resize": true
+				},
+				"modes": {
+				  "grab": {
+					"distance": 140,
+					"line_linked": {
+					  "opacity": 1
+					}
+				  },
+				  "bubble": {
+					"distance": 400,
+					"size": 40,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 3
+				  },
+				  "repulse": {
+					"distance": 200,
+					"duration": 0.4
+				  },
+				  "push": {
+					"particles_nb": 4
+				  },
+				  "remove": {
+					"particles_nb": 2
+				  }
+				}
+			  },
+			  "retina_detect": true
+			});
+
+			//Brandon 3H4
+		</script>
+	</body>
+</html>
